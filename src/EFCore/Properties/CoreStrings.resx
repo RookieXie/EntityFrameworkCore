@@ -991,7 +991,7 @@
     <comment>Debug CoreEventId.RedundantIndexRemoved string string</comment>
   </data>
   <data name="LogIncompatibleMatchingForeignKeyProperties" xml:space="preserve">
-    <value>The best match for foreign key properties {foreignKey} are incompatible with the principal key {principalKey}.</value>
+    <value>The foreign key properties haven't been configured by convention because the best match {foreignKey} are incompatible with the current principal key {principalKey}.</value>
     <comment>Debug CoreEventId.IncompatibleMatchingForeignKeyProperties string string</comment>
   </data>
   <data name="LogRequiredAttributeOnDependent" xml:space="preserve">
@@ -999,7 +999,7 @@
     <comment>Debug CoreEventId.RequiredAttributeOnDependent string string</comment>
   </data>
   <data name="LogRequiredAttributeOnBothNavigations" xml:space="preserve">
-    <value>The RequiredAttribute on '{principalEntityType}.{principalNavigation}' was ignored bacause there is also a RequiredAttribute on '{dependentEntityType}.{dependentNavigation}'.</value>
+    <value>The RequiredAttribute on '{principalEntityType}.{principalNavigation}' was ignored because there is also a RequiredAttribute on '{dependentEntityType}.{dependentNavigation}'. RequiredAttribute should only be specified on the dependent side of the relationship.</value>
     <comment>Debug CoreEventId.RequiredAttributeOnBothNavigations string string string string</comment>
   </data>
   <data name="LogForeignKeyAttributesOnBothNavigations" xml:space="preserve">
@@ -1023,11 +1023,11 @@
     <comment>Warning CoreEventId.ConflictingShadowForeignKeysWarning string string string</comment>
   </data>
   <data name="LogMultipleNavigationProperties" xml:space="preserve">
-    <value>Relationship from '{firstEntityType}' to '{secondEntityType}' not configured because there are multiple properties on one entity type {navigationProperties} that could be matched with the properties on the other entity type {inverseNavigations}.</value>
+    <value>No relationship from '{firstEntityType}' to '{secondEntityType}' has been configured by convention because there are multiple properties on one entity type {navigationProperties} that could be matched with the properties on the other entity type {inverseNavigations}.</value>
     <comment>Debug CoreEventId.MultipleNavigationProperties string string string string</comment>
   </data>
   <data name="LogMultiplePrimaryKeyCandidates" xml:space="preserve">
-    <value>Primary key not configured as both properties '{firstProperty}' and '{secondProperty}' could be used as the primary key for the entity type '{entityType}'.</value>
+    <value>Primary key hasn't been configured by convention as both properties '{firstProperty}' and '{secondProperty}' could be used as the primary key for the entity type '{entityType}'.</value>
     <comment>Debug CoreEventId.MultiplePrimaryKeyCandidates string string string</comment>
   </data>
   <data name="OwnedDerivedType" xml:space="preserve">
